@@ -1,0 +1,19 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "comed pricing",
+      "intents": [
+        {"name": "FiveMinutePriceIntent", "slots": [], "samples": ["what is the current electricity price", "current five minute price", "latest five minute price", "real time price", "what is electricity costing right now", "how much is electricity right now"]},
+        {"name": "CurrentHourAverageIntent", "slots": [], "samples": ["what is the current hour average", "current hour average price", "average price this hour", "hour average"]},
+        {"name": "DayAheadPricesIntent", "slots": [], "samples": ["what are the day ahead prices", "day ahead prices", "what will electricity cost tomorrow", "forecast prices for today", "predicted prices"]},
+        {"name": "PriceSummaryIntent", "slots": [], "samples": ["give me a full price summary", "price summary", "all prices", "summarize electricity prices", "full summary"]},
+        {"name": "BestTimeIntent", "slots": [], "samples": ["what is the best time to run my appliances", "when should I run my appliances", "best time to use electricity", "when is electricity cheapest", "best time to charge my car"]},
+        {"name": "Last24HoursIntent", "slots": [], "samples": ["what were prices like in the last 24 hours", "price history", "24 hour price summary", "recent price history"]},
+        {"name": "IsItGoodTimeIntent", "slots": [], "samples": ["is it a good time to use electricity", "should I run my appliances now", "is now a good time", "is electricity cheap right now"]},
+        {"name": "AMAZON.HelpIntent"},
+        {"name": "AMAZON.CancelIntent"},
+        {"name": "AMAZON.StopIntent"}
+      ]
+    }
+  }
+}
