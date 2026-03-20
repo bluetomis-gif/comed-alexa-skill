@@ -144,10 +144,10 @@ class SessionEndedHandler(AbstractRequestHandler):
     def handle(self, hi):    return hi.response_builder.response
 
 class CatchAll(AbstractExceptionHandler):
-    def can_handle(self, hi, exc): return True
-    def handle(self, hi, exc):
-        logging.error('Error: %s', exc, exc_info=True)
-        return end(hi, 'Sorry, something went wrong. Please try again.')
+    def can_handle(self, handler_input, exception): return True
+    def handle(self, handler_input, exception):
+        logging.error("Error: %s", exception, exc_info=True)
+        return end(handler_input, "Sorry, something went wrong. Please try again.")
 
 for h in [LaunchHandler, FiveMinuteHandler, HourAverageHandler, DayAheadHandler,
           SummaryHandler, BestTimeHandler, Last24Handler, GoodTimeHandler,
