@@ -106,7 +106,7 @@ class BestTimeHandler(AbstractRequestHandler):
         return end(hi, f'Based on the {src}, the best time to run large appliances is around {t} Central Time at {p:.1f} cents per kilowatt-hour, {lbl(p)}.')
 
 class Last24Handler(AbstractRequestHandler):
-    def can_handle(self, hi): return is_intent_name('Last24HoursIntent')(hi)
+    def can_handle(self, hi): return is_intent_name('RecentPriceHistoryIntent')(hi)
     def handle(self, hi):
         d = comed_fetch('5minutefeed')
         if not d: return end(hi, 'Historical pricing data is unavailable right now.')
